@@ -1,5 +1,7 @@
 # [8bit.morningcd.com](8bit.morningcd.com)
 
+**What was the first piece of music you listened to this morning?**
+
 This is the 8bit-style frontend remake of [morningcd.com](morningcd.com). You can view the original morningcd code [here](https://github.com/zhammer/morning-cd).
 
 Eventually I'd like to get this all into one repo. Not sure when I'd be able to do that, but the general goals would be:
