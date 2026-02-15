@@ -1,3 +1,4 @@
+import "../backend/env";
 import type { VercelRequest, VercelResponse } from "@vercel/node";
 import { getClientCredentialsToken } from "../backend/clients/spotify";
 

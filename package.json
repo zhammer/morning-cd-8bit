@@ -67,6 +67,7 @@
     "cypress-app-watcher-preprocessor": "^1.1.2",
     "cypress-cucumber-preprocessor": "^1.11.2",
     "cypress-plugin-tab": "^1.0.0",
+    "dotenv": "^17.3.1",
     "drizzle-kit": "^0.31.9",
     "graphql-tools": "^4.0.4",
     "prettier": "^1.17.0",

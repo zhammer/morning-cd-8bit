@@ -122,13 +122,13 @@ export async function getPlaylistTracks(
     `https://api.spotify.com/v1/playlists/${playlistId}/tracks?limit=100`;
 
   while (url) {
-    const response = await fetch(url, {
+    const response: Response = await fetch(url, {
       headers: { Authorization: `Bearer ${accessToken}` },
     });
     if (!response.ok) {
       throw new Error(`Spotify getPlaylistTracks failed: ${response.status}`);
     }
-    const data = await response.json();
+    const data: any = await response.json();
     for (const item of data.items) {
       if (item.track) {
         trackIds.push(item.track.id);

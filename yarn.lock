@@ -6109,6 +6109,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"dotenv@npm:^17.3.1":
+  version: 17.3.1
+  resolution: "dotenv@npm:17.3.1"
+  checksum: 10c0/c78e0c2d5a549c751e544cc60e2b95e7cb67e0c551f42e094d161c6b297aa44b630a3c2dcacf5569e529a6c2a6b84e2ab9be8d37b299d425df5a18b81ce4a35f
+  languageName: node
+  linkType: hard
+
 "download@npm:^5.0.2":
   version: 5.0.3
   resolution: "download@npm:5.0.3"
@@ -9966,6 +9973,7 @@ __metadata:
     cypress-app-watcher-preprocessor: "npm:^1.1.2"
     cypress-cucumber-preprocessor: "npm:^1.11.2"
     cypress-plugin-tab: "npm:^1.0.0"
+    dotenv: "npm:^17.3.1"
     drizzle-kit: "npm:^0.31.9"
     drizzle-orm: "npm:^0.45.1"
     graphql: "npm:^16.6.0"

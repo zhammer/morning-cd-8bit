@@ -9,7 +9,7 @@ export interface GraphQLContext {
 export const builder = new SchemaBuilder<{
   Context: GraphQLContext;
   Scalars: {
-    DateTime: { Input: string; Output: Date | string };
+    DateTime: { Input: Date; Output: Date | string };
     Date: { Input: string; Output: string };
   };
 }>({});
