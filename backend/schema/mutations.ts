@@ -21,11 +21,16 @@ builder.mutationType({
           ianaTimezone: args.input.ianaTimezone,
         });
 
-        const token = await getClientCredentialsToken(
-          process.env.SPOTIFY_CLIENT_ID!,
-          process.env.SPOTIFY_CLIENT_SECRET!
-        );
-        const song = await getTrack(listen.songId, token);
+        let song = null;
+        try {
+          const token = await getClientCredentialsToken(
+            process.env.SPOTIFY_CLIENT_ID!,
+            process.env.SPOTIFY_CLIENT_SECRET!
+          );
+          song = await getTrack(listen.songId, token);
+        } catch (err) {
+          console.error("Failed to resolve song from Spotify:", err);
+        }
 
         // Fire-and-forget: add to daily playlist
         const listenDate = listen.listenTimeUtc.toISOString().split("T")[0];

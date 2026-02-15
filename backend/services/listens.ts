@@ -1,4 +1,4 @@
-import { eq, gte, lt, desc, and } from "drizzle-orm";
+import { eq, gt, lt, desc, and } from "drizzle-orm";
 import { listens, type Listen } from "../db/schema";
 import { getSunlightWindow } from "./sunlight";
 import type { Db } from "../db/client";
@@ -80,7 +80,7 @@ export async function getListens(
 ): Promise<ListenConnection> {
   const conditions = [];
   if (options.after) {
-    conditions.push(gte(listens.listenTimeUtc, options.after));
+    conditions.push(gt(listens.listenTimeUtc, options.after));
   }
   if (options.before) {
     conditions.push(lt(listens.listenTimeUtc, options.before));
@@ -96,7 +96,7 @@ export async function getListens(
     .limit(limit);
 
   const hasMore = results.length > (options.last || 10);
-  const trimmed = hasMore ? results.slice(1) : results;
+  const trimmed = hasMore ? results.slice(0, options.last || 10) : results;
 
   const edges: ListenEdge[] = trimmed.map((listen) => ({
     node: listen,

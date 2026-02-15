@@ -56,8 +56,8 @@ export const SunlightWindowRef = builder.objectRef<{
 }>("SunlightWindow");
 builder.objectType(SunlightWindowRef, {
   fields: (t) => ({
-    sunriseUtc: t.field({ type: "DateTime", resolve: (sw) => sw.sunriseUtc }),
-    sunsetUtc: t.field({ type: "DateTime", resolve: (sw) => sw.sunsetUtc }),
+    sunriseUtc: t.field({ type: "DateTime", nullable: false, resolve: (sw) => sw.sunriseUtc }),
+    sunsetUtc: t.field({ type: "DateTime", nullable: false, resolve: (sw) => sw.sunsetUtc }),
   }),
 });
 
