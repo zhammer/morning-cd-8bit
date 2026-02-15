@@ -32,17 +32,19 @@ builder.mutationType({
           console.error("Failed to resolve song from Spotify:", err);
         }
 
-        // Fire-and-forget: add to daily playlist
+        // Add to daily playlist (awaited so it completes before serverless function terminates)
         const listenDate = listen.listenTimeUtc.toISOString().split("T")[0];
-        addListenToPlaylist(ctx.db, {
-          songId: listen.songId,
-          listenDate,
-          spotifyClientId: process.env.SPOTIFY_CLIENT_ID!,
-          spotifyClientSecret: process.env.SPOTIFY_CLIENT_SECRET!,
-          spotifyRefreshToken: process.env.SPOTIFY_USER_REFRESH_TOKEN!,
-        }).catch((err) => {
+        try {
+          await addListenToPlaylist(ctx.db, {
+            songId: listen.songId,
+            listenDate,
+            spotifyClientId: process.env.SPOTIFY_CLIENT_ID!,
+            spotifyClientSecret: process.env.SPOTIFY_CLIENT_SECRET!,
+            spotifyRefreshToken: process.env.SPOTIFY_USER_REFRESH_TOKEN!,
+          });
+        } catch (err) {
           console.error("Failed to add listen to playlist:", err);
-        });
+        }
 
         return { ...listen, song };
       },

@@ -47,7 +47,7 @@ Morning CD is a website where people share the first song they listened to each 
 - No Hasura — chose all-Vercel approach for fewer moving parts
 - Frontend unchanged — same React CRA app, only API URL changes
 - GraphQL schema matches existing `cypress/plugins/schema.graphql` exactly so frontend queries don't change
-- Playlist updates are fire-and-forget inside submitListen mutation
+- Playlist updates are awaited inside submitListen mutation (errors are caught and logged, not propagated)
 - The "sundial" (day/night cycle) is core UX — frontend fetches sunlightWindow for yesterday/today/tomorrow and uses XState machine to determine app state
 
 ## Known Gotchas
