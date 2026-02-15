@@ -17,7 +17,7 @@ export default function Listen({ listen }: ListenProps) {
         data-test='listen'
       >
         <SongBody song={listen.song} />
-        {listen.note !== '' && <Note>"{listen.note}"</Note>}
+        {listen.note && <Note>"{listen.note}"</Note>}
       </ListenContainer>
     </Styleless.a>
   );
