@@ -1,0 +1,14 @@
+{
+  "installCommand": "corepack enable && yarn install",
+  "buildCommand": "yarn db:push && yarn build",
+  "devCommand": "vite --port $PORT",
+  "outputDirectory": "build",
+  "rewrites": [
+    { "source": "/api/(.*)", "destination": "/api/$1" },
+    {
+      "source": "/(.*)",
+      "has": [{ "type": "header", "key": "sec-fetch-mode", "value": "navigate" }],
+      "destination": "/index.html"
+    }
+  ]
+}

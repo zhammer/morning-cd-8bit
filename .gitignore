@@ -3,7 +3,11 @@
 # dependencies
 /node_modules
 /.pnp
-.pnp.js
+.pnp.*
+
+# yarn
+.yarn/*
+!.yarn/releases
 
 # testing
 /coverage
@@ -23,3 +27,5 @@ yarn-debug.log*
 yarn-error.log*
 cypress/screenshots
 cypress/video
+.vercel
+.env*.local

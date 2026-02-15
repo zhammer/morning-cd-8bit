@@ -7,7 +7,7 @@ import useQuestionInput from './useQuestionInput';
 import useSpotifySearch from './useSpotifySearch';
 import Song from '../../components/Song';
 import useConfidentInput from '../../hooks/useConfidentInput';
-import { Redirect } from 'react-router';
+import { Redirect } from 'react-router-dom';
 import useFocusOnMount from '../../hooks/useFocusOnMount';
 import { useGnomon } from '../../hooks/useSundial';
 import useSubmittedAfterLastSunrise from '../../hooks/useSubmittedAfterLastSunrise';
