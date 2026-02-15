@@ -1,5 +1,6 @@
 {
   "buildCommand": "yarn build",
+  "devCommand": "yarn start",
   "outputDirectory": "build",
   "rewrites": [
     { "source": "/api/(.*)", "destination": "/api/$1" },
