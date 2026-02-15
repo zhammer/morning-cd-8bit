@@ -50,6 +50,21 @@ Morning CD is a website where people share the first song they listened to each 
 - Playlist updates are fire-and-forget inside submitListen mutation
 - The "sundial" (day/night cycle) is core UX — frontend fetches sunlightWindow for yesterday/today/tomorrow and uses XState machine to determine app state
 
+## Known Gotchas
+
+- `graphql` was upgraded from v14 to v16 for Pothos/Yoga compatibility — old Apollo Client packages show peer dep warnings but still work
+- The `after` cursor param uses exclusive (`gt`) semantics, matching Relay conventions
+- Spotify tokens are fetched per-request (no caching yet) — could be rate-limited under load
+- `backend/clients/tz-coordinates.ts` is a 458-entry lookup ported from Python `iana-tz-coord` — not auto-updated
+- Playlist emoji selection is random, not deterministic
+
+## Testing
+
+- 21 backend tests across 8 test files (Vitest)
+- Tests mock external APIs (Spotify, sunrise-sunset.org) and DB via `vi.fn()`
+- Cypress E2E tests exist for the frontend (unchanged)
+- No integration tests against a real database yet
+
 ## Plans
 
 - Design doc: `docs/plans/2026-02-15-backend-consolidation-design.md`
