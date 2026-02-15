@@ -2,6 +2,7 @@
   "name": "morning-cd-8bit",
   "version": "0.1.0",
   "private": true,
+  "packageManager": "yarn@4.6.0",
   "dependencies": {
     "@apollo/react-hooks": "^0.1.0-beta.2",
     "@neondatabase/serverless": "^1.0.2",
@@ -31,8 +32,8 @@
     "react": "^16.8.6",
     "react-apollo": "^2.5.5",
     "react-dom": "^16.8.6",
+    "react-router": "^5.0.0",
     "react-router-dom": "^5.0.0",
-    "react-scripts": "3.0.0",
     "react-visibility-sensor": "^5.0.2",
     "styled-components": "^4.2.0",
     "typescript": "3.4.5",
@@ -41,11 +42,9 @@
     "xstate": "^4.5.0"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "start:cypress": "WAIT_FOR_MESSAGE='Compiled successfully!' cypressAppWatcher yarn start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
+    "start": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
     "db:generate": "drizzle-kit generate",
     "db:migrate": "drizzle-kit migrate",
     "db:push": "drizzle-kit push",
@@ -59,26 +58,12 @@
     "printWidth": 100,
     "tabWidth": 2
   },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
   "cypress-cucumber-preprocessor": {
     "nonGlobalStepDefinitions": true
   },
   "devDependencies": {
     "@vercel/node": "^5.6.3",
+    "@vitejs/plugin-react": "^5.1.4",
     "cypress": "3.3.1",
     "cypress-app-watcher-preprocessor": "^1.1.2",
     "cypress-cucumber-preprocessor": "^1.11.2",
@@ -90,6 +75,7 @@
     "serve": "^11.0.0",
     "serverless": "^1.42.3",
     "serverless-finch": "^2.4.2",
+    "vite": "^7.3.1",
     "vitest": "^4.0.18"
   }
 }

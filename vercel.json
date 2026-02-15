@@ -1,5 +1,6 @@
 {
-  "buildCommand": "NODE_OPTIONS=--openssl-legacy-provider yarn build",
+  "installCommand": "corepack enable && yarn install",
+  "buildCommand": "yarn build",
   "devCommand": "yarn start",
   "outputDirectory": "build",
   "rewrites": [

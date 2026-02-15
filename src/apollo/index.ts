@@ -61,7 +61,7 @@ cache.writeData(initialData);
  */
 const httpLink = createHttpLink({
   fetch: (window as any).cypressGraphqlFetch || window.fetch,
-  uri: (process.env.REACT_APP_MORNING_CD_API_ENDPOINT || '') + '/graphql'
+  uri: (import.meta.env.VITE_MORNING_CD_API_ENDPOINT || '') + '/graphql'
 });
 
 function pluckSong(rawSong: any): Song {
@@ -79,10 +79,10 @@ function pluckSong(rawSong: any): Song {
 const restLink = new RestLink({
   // cypress hack: see https://github.com/cypress-io/cypress/issues/95
   customFetch: window.fetch || fetchPolyfill,
-  uri: (process.env.REACT_APP_MORNING_CD_API_ENDPOINT || '') + '/',
+  uri: (import.meta.env.VITE_MORNING_CD_API_ENDPOINT || '') + '/',
   endpoints: {
     morningCd: {
-      uri: (process.env.REACT_APP_MORNING_CD_API_ENDPOINT || '') + '/',
+      uri: (import.meta.env.VITE_MORNING_CD_API_ENDPOINT || '') + '/',
       // this transformer is only made for the accesstoken endpoint
       responseTransformer: async response => {
         const data = await response.json();
