@@ -462,6 +462,9 @@ export const COORDINATES_BY_TZ_NAME: Record<string, Coordinates> = {
   "US/Pacific": { latitude: 34.05222222222222, longitude: -118.24277777777777 },
   "US/Samoa": { latitude: -14.266666666666667, longitude: -170.7 },
   "W-SU": { latitude: 55.755833333333335, longitude: 37.617777777777775 },
+  "UTC": { latitude: 51.4772, longitude: -0.0005 },
+  "Etc/UTC": { latitude: 51.4772, longitude: -0.0005 },
+  "Etc/GMT": { latitude: 51.4772, longitude: -0.0005 },
 };
 
 export function getCoordinatesForTimezone(ianaTimezone: string): Coordinates | null {
