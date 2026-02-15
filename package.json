@@ -36,7 +36,6 @@
     "react-router-dom": "^5.0.0",
     "react-visibility-sensor": "^5.0.2",
     "styled-components": "^4.2.0",
-    "typescript": "3.4.5",
     "use-react-router": "^1.0.5",
     "whatwg-fetch": "^3.0.0",
     "xstate": "^4.5.0"
@@ -75,6 +74,7 @@
     "serve": "^11.0.0",
     "serverless": "^1.42.3",
     "serverless-finch": "^2.4.2",
+    "typescript": "^5.9.3",
     "vite": "^7.3.1",
     "vitest": "^4.0.18"
   }

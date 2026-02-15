@@ -9986,7 +9986,7 @@ __metadata:
     serverless: "npm:^1.42.3"
     serverless-finch: "npm:^2.4.2"
     styled-components: "npm:^4.2.0"
-    typescript: "npm:3.4.5"
+    typescript: "npm:^5.9.3"
     use-react-router: "npm:^1.0.5"
     vite: "npm:^7.3.1"
     vitest: "npm:^4.0.18"
@@ -13513,17 +13513,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@npm:3.4.5":
-  version: 3.4.5
-  resolution: "typescript@npm:3.4.5"
-  bin:
-    tsc: ./bin/tsc
-    tsserver: ./bin/tsserver
-  checksum: 10c0/c15aad7e12ad3824bdd89127b62851197db42e33dc3880b54acd6de6b2f395ea9615e66e388e5ef56708d8080dcdbaa7b1a93e10a79c89a190ed5b498ccea5e3
-  languageName: node
-  linkType: hard
-
-"typescript@npm:typescript@5.9.3":
+"typescript@npm:^5.9.3, typescript@npm:typescript@5.9.3":
   version: 5.9.3
   resolution: "typescript@npm:5.9.3"
   bin:
@@ -13533,17 +13523,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@patch:typescript@npm%3A3.4.5#optional!builtin<compat/typescript>":
-  version: 3.4.5
-  resolution: "typescript@patch:typescript@npm%3A3.4.5#optional!builtin<compat/typescript>::version=3.4.5&hash=9a3324"
-  bin:
-    tsc: ./bin/tsc
-    tsserver: ./bin/tsserver
-  checksum: 10c0/53e4d0cfb339eff937912830009da19ca233047958ebb53c1cc625cd0a52f562575e732c2d679c969bab86795cecd74d1cd90eddfc8710585bbbfd5dd3e4d898
-  languageName: node
-  linkType: hard
-
-"typescript@patch:typescript@npm%3Atypescript@5.9.3#optional!builtin<compat/typescript>":
+"typescript@patch:typescript@npm%3A^5.9.3#optional!builtin<compat/typescript>, typescript@patch:typescript@npm%3Atypescript@5.9.3#optional!builtin<compat/typescript>":
   version: 5.9.3
   resolution: "typescript@patch:typescript@npm%3A5.9.3#optional!builtin<compat/typescript>::version=5.9.3&hash=5786d5"
   bin:
