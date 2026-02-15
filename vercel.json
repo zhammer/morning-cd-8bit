@@ -1,7 +1,7 @@
 {
   "installCommand": "yarn install",
   "buildCommand": "yarn build",
-  "devCommand": "yarn start",
+  "devCommand": "vite --port $PORT",
   "outputDirectory": "build",
   "rewrites": [
     { "source": "/api/(.*)", "destination": "/api/$1" },
