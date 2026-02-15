@@ -24,7 +24,7 @@
     "apollo-link-rest": "^0.7.3",
     "apollo-utilities": "^1.2.1",
     "drizzle-orm": "^0.45.1",
-    "graphql": "^14.2.1",
+    "graphql": "^16.6.0",
     "graphql-anywhere": "^4.2.1",
     "graphql-tag": "^2.10.1",
     "graphql-yoga": "^5.18.0",

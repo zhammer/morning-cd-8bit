@@ -10758,12 +10758,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"graphql@npm:^14.2.1":
-  version: 14.2.1
-  resolution: "graphql@npm:14.2.1"
-  dependencies:
-    iterall: "npm:^1.2.2"
-  checksum: 10c0/e4820350e9d9237c8af58c96f65d9e89b5a5c77bb5e68cc7eb511eb58a36e943de1993539ceab118f5800209007db9a8259c28055a93f21708142b648cbc4d85
+"graphql@npm:^16.6.0":
+  version: 16.12.0
+  resolution: "graphql@npm:16.12.0"
+  checksum: 10c0/b6fffa4e8a4e4a9933ebe85e7470b346dbf49050c1a482fac5e03e4a1a7bed2ecd3a4c97e29f04457af929464bc5e4f2aac991090c2f320111eef26e902a5c75
   languageName: node
   linkType: hard
 
@@ -12361,7 +12359,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"iterall@npm:^1.1.3, iterall@npm:^1.2.2":
+"iterall@npm:^1.1.3":
   version: 1.2.2
   resolution: "iterall@npm:1.2.2"
   checksum: 10c0/666f1cdaed2c35c17fd5da231f1d55a7b800fae69a5956af3b33aea2e3f8abfd608cfa46bb80f6e5b72c2f90acfa80b2ec32a4636817d1f83daf09b5eba3aaa7
@@ -14497,7 +14495,7 @@ __metadata:
     cypress-plugin-tab: "npm:^1.0.0"
     drizzle-kit: "npm:^0.31.9"
     drizzle-orm: "npm:^0.45.1"
-    graphql: "npm:^14.2.1"
+    graphql: "npm:^16.6.0"
     graphql-anywhere: "npm:^4.2.1"
     graphql-tag: "npm:^2.10.1"
     graphql-tools: "npm:^4.0.4"
