@@ -5,6 +5,8 @@
   "private": true,
   "dependencies": {
     "@apollo/react-hooks": "^0.1.0-beta.2",
+    "@neondatabase/serverless": "^1.0.2",
+    "@pothos/core": "^4.12.0",
     "@sentry/browser": "^5.2.1",
     "@types/jest": "24.0.11",
     "@types/node": "11.13.7",
@@ -21,9 +23,11 @@
     "apollo-link-http": "^1.5.14",
     "apollo-link-rest": "^0.7.3",
     "apollo-utilities": "^1.2.1",
+    "drizzle-orm": "^0.45.1",
     "graphql": "^14.2.1",
     "graphql-anywhere": "^4.2.1",
     "graphql-tag": "^2.10.1",
+    "graphql-yoga": "^5.18.0",
     "query-string": "^6.4.2",
     "react": "^16.8.6",
     "react-apollo": "^2.5.5",
@@ -42,7 +46,13 @@
     "start:cypress": "WAIT_FOR_MESSAGE='Compiled successfully!' cypressAppWatcher yarn start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "drizzle-kit migrate",
+    "db:push": "drizzle-kit push",
+    "db:studio": "drizzle-kit studio",
+    "test:backend": "vitest run",
+    "test:backend:watch": "vitest"
   },
   "prettier": {
     "jsxSingleQuote": true,
@@ -69,15 +79,18 @@
     "nonGlobalStepDefinitions": true
   },
   "devDependencies": {
+    "@vercel/node": "^5.6.3",
     "cypress": "3.3.1",
     "cypress-app-watcher-preprocessor": "^1.1.2",
     "cypress-cucumber-preprocessor": "^1.11.2",
     "cypress-plugin-tab": "^1.0.0",
+    "drizzle-kit": "^0.31.9",
     "graphql-tools": "^4.0.4",
     "prettier": "^1.17.0",
     "prettylint": "^1.0.0",
     "serve": "^11.0.0",
     "serverless": "^1.42.3",
-    "serverless-finch": "^2.4.2"
+    "serverless-finch": "^2.4.2",
+    "vitest": "^4.0.18"
   }
 }
