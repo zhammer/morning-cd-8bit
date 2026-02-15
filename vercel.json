@@ -1,6 +1,6 @@
 {
   "installCommand": "corepack enable && yarn install",
-  "buildCommand": "yarn db:migrate && yarn build",
+  "buildCommand": "yarn db:push && yarn build",
   "devCommand": "vite --port $PORT",
   "outputDirectory": "build",
   "rewrites": [
