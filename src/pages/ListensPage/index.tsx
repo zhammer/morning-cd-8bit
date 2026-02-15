@@ -5,7 +5,7 @@ import Listen from './Listen';
 import useFetchListens from './useFetchListens';
 import List from '../../components/List';
 import { useGnomon } from '../../hooks/useSundial';
-import { Redirect } from 'react-router';
+import { Redirect } from 'react-router-dom';
 import VisibilitySensor from 'react-visibility-sensor';
 import { LoadingMore } from './ListenPage.styles';
 import Text from '../../components/Text';

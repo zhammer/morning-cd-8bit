@@ -1,7 +1,7 @@
 import React from 'react';
 import useQueryParams from './useQueryParams';
 import Page from '../../components/Page';
-import { Redirect } from 'react-router';
+import { Redirect } from 'react-router-dom';
 import useFetchSong from './useFetchSong';
 import Song from '../../components/Song';
 import Field from '../../components/Field';
