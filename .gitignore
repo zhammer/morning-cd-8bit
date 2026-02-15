@@ -6,7 +6,8 @@
 .pnp.*
 
 # yarn
-.yarn/
+.yarn/*
+!.yarn/releases
 
 # testing
 /coverage
