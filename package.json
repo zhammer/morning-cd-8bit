@@ -1,6 +1,5 @@
 {
   "name": "morning-cd-8bit",
-  "proxy": "https://api.morningcd.com",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
