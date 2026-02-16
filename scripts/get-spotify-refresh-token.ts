@@ -7,8 +7,8 @@ import { exec } from 'child_process';
 
 const CLIENT_ID = process.env.SPOTIFY_CLIENT_ID;
 const CLIENT_SECRET = process.env.SPOTIFY_CLIENT_SECRET;
-const PORT = 8888;
-const REDIRECT_URI = `http://localhost:${PORT}/callback`;
+const PORT = 3000;
+const REDIRECT_URI = `http://127.0.0.1:${PORT}`;
 const SCOPES = 'playlist-modify-public';
 
 if (!CLIENT_ID || !CLIENT_SECRET) {
@@ -32,13 +32,7 @@ const authorizeUrl =
   }).toString();
 
 const server = http.createServer(async (req, res) => {
-  const url = new URL(req.url!, `http://localhost:${PORT}`);
-
-  if (url.pathname !== '/callback') {
-    res.writeHead(404);
-    res.end();
-    return;
-  }
+  const url = new URL(req.url!, `http://127.0.0.1:${PORT}`);
 
   const code = url.searchParams.get('code');
   const returnedState = url.searchParams.get('state');
@@ -104,7 +98,7 @@ const server = http.createServer(async (req, res) => {
 });
 
 server.listen(PORT, () => {
-  console.log(`Listening on http://localhost:${PORT}`);
+  console.log(`Listening on http://127.0.0.1:${PORT}`);
   console.log('Opening Spotify authorization page in your browser...\n');
 
   // Open browser (macOS)
